@@ -33,7 +33,7 @@ public class Gauss_Seidel {
             for(int i = 0; i < R.length; i++) {
           
                 for(int j = 0; j < n + 1; j++) {
-                    T[i][j] = M[R[i]][J];
+                    T[i][j] = M[R[i]][j];
                 }
 
             }
