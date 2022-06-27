@@ -106,7 +106,7 @@ public class Gauss_Seidel {
 
                     iterations++;
                     if(iterations == 1) {
-                        coontinue;
+                        continue;
                     }
 
                     boolean stop = true;
