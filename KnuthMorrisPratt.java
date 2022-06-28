@@ -37,15 +37,16 @@ public class KnuthMorrisPratt {
                 failure[j] = -1;
             }
         }
+
     }
 
     private int posMatch(String text, String pat) {
 
-        int i = 0, int j = 0;
+        int i = 0, j = 0;
         int lens = text.length();
         int lenp = pat.length();
         while(i < lens && j < lenp) {
-            if( text.charAt(i) == pat.chartAt(j))
+            if( text.charAt(i) == pat.charAt(j))
             {
                 i++;
                 j++;
@@ -60,14 +61,10 @@ public class KnuthMorrisPratt {
         }
         return ((j == lenp) ? (i -lenp) : -1);
     }
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Knuth Morris Pratt Test \n");
-        System.out.println("\n Enter Text\n");
-        String text = br.br.readLine();
-        System.out.println("\n Enter Pattern");
-        String pattern = br.readLine();
-        KnuthMorrisPratt kmp = new KnuthMorrisPratt(text, pattern);
+        KnuthMorrisPratt kmp = new KnuthMorrisPratt("Bonjour c'est oumar ousmane sow", "s");
     }
 } 
