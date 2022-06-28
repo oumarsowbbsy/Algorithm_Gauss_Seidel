@@ -5,7 +5,9 @@ import java.io.IOException;
 public class BoyerMoore 
 {
 
-    public void findPattern(String t, String p) {
+    public void findPattern(String t, String p)
+    {
+
         char[] text = t.toCharArray();
         char[] pattern = p.toCharArray();
         int pos = indexOf(text, pattern);
@@ -15,6 +17,7 @@ public class BoyerMoore
         } else {
             System.out.println("Pattern found at position : "+pos);
         }
+
     }
     
     public int indexOf(char[] text, char[] pattern)
@@ -32,8 +35,8 @@ public class BoyerMoore
 
                 if(j == 0) {
                     return i;
-                    i += Math.max(offsetTable[pattern.length - 1 - j], charTable[text[i]]);
                 }
+                i += Math.max(offsetTable[pattern.length - 1 - j], charTable[text[i]]);
             }
         }
 
@@ -94,7 +97,7 @@ public class BoyerMoore
 
     public static void main(String[] args) throws IOException 
     {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Boyer Moore Algorithm Test\n");
         System.out.println("\n Enter Text \n");
