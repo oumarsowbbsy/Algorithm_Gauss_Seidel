@@ -23,7 +23,7 @@ public class ArrayListImpl<E>
 
     public ArrayListImpl(int initialCapacity) {
         
-        arrayList = newArrayList<E>(initialCapacity);
+        arrayList = new ArrayList<E>(initialCapacity);
     }
 
     public boolean add(E e)
