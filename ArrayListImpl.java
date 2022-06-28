@@ -152,7 +152,7 @@ public class ArrayListImpl<E>
         arrayList.trimToSize();
     }
 
-    public static void main() {
+    public static void main(String[] args) {
 
         ArrayListImpl<Integer> arrayList = new ArrayListImpl<Integer>();
 
@@ -189,7 +189,7 @@ public class ArrayListImpl<E>
         Iterator<Integer> itr = arrayList.iterator();
 
         while(itr.hasNext()) {
-            System.out.println(listIterator.next() + "\t");
+            System.out.println(itr.next() + "\t");
         }
         System.out.println();
 
@@ -213,7 +213,7 @@ public class ArrayListImpl<E>
         arrayList.set(1, 101);
         System.out.println("The size of the arrayList is " + arrayList.size());
         System.out.println("The elements of the returned list are");
-        List<Integer> list = arrayList.sublist(0,1);
+        List<Integer> list = arrayList.subList(0,1);
         for(int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i) + "\t");
         }
